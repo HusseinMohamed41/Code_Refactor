@@ -1,0 +1,180 @@
+/* Start Variables */
+:root {
+  --main-color: #007bff;
+  --alt-color: #0056b3;
+  --main-transition: 0.3s;
+}
+
+/* End Variables */
+/* Start global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+
+}
+
+
+
+ul {
+  list-style: none;
+}
+
+input {
+  outline: none;
+  caret-color: var(--secondary-color);
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.up {
+  position: fixed;
+  bottom: 10px;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 50%;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.up.show {
+  right: 10px;
+}
+
+@media (max-width: 767px) {
+  .up {
+    display: none;
+  }
+}
+
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End global rules */
+
+/* Start Styles  */
+
+/* Header  */
+.header {
+  background-color: var(--main-color);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 5px;
+  background-color: white;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Content  */
+.post {
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform var(--main-transition) ease, box-shadow var(--main-transition) ease;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.post h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.post p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.post .btn-primary {
+  background-color: var(--main-color);
+  border: none;
+}
+
+.post .btn-primary:hover {
+  background-color: var(--alt-color);
+}
+
+/* Footer */
+
+.footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 0;
+}
